@@ -1,0 +1,15 @@
+class CreateRides < ActiveRecord::Migration[5.1]
+  def change
+    create_table :rides do |t|
+      t.string :starting_town
+      t.string :ending_town
+      t.string :starting_intersection
+      t.string :ending_intersection
+      t.integer :distance_in_miles
+      t.integer :star_rating
+      t.references :author_id, foreign_key: true
+
+      t.timestamps
+    end
+  end
+end
