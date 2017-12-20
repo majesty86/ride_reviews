@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(version: 20171219211132) do
     t.string "ending_intersection"
     t.integer "distance_in_miles"
     t.integer "star_rating"
-    t.bigint "user_id"
+    t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_rides_on_user_id"
+    t.index ["author_id"], name: "index_rides_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,5 +36,4 @@ ActiveRecord::Schema.define(version: 20171219211132) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "rides", "users"
 end

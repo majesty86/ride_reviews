@@ -7,7 +7,7 @@ class CreateRides < ActiveRecord::Migration[5.1]
       t.string :ending_intersection
       t.integer :distance_in_miles
       t.integer :star_rating
-      t.references :user, foreign_key: :author_id
+      t.references :author
 
       t.timestamps
     end
