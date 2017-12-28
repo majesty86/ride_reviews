@@ -1,3 +1,42 @@
+.rides-container {
+  float: left;
+  width: 74%;
+  height: 666px;
+  overflow-y: scroll;
+  border: 1px solid red;
+}
+
 .rides-container__list {
   list-style-type: none;
+  text-align: center;
 }
+
+.navigation {
+  float: left;
+  width: 24%;
+  height: 666px;
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+.navigation__registration {
+  width: 100%;
+  height: 220px;
+  border: 1px solid blue;
+}
+
+.navigation__about {
+  width: 100%;
+  height: 220px;
+  border: 1px solid green;
+}
+
+.navigation__image--random {
+  width: 100%;
+  height: 220px;
+  border: 1px solid black;
+  /*IDEA: Images can be people on motorcycles...it'll 'scroll' through...fade from one image to the next*/
+}
+
+
+
