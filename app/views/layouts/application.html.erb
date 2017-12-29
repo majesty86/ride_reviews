@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RideReviews</title>
+    <title>Ride Reviews</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <div class="navigation">
+      <div class="navigation__registration">Register</div>
+      <div class="navigation__about">About</div>
+      <div class="navigation__image--random">Picture - use paperclip to size up?</div>
+    </div>
     <%= yield %>
   </body>
 </html>
