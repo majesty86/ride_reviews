@@ -1,0 +1,8 @@
+$('.navigation__login-link').remove()
+$('.navigation').find('.errors').remove()
+
+if ($('.login-form').length === 0) {
+  $('.navigation__login').append('<%= j render "login" %>')  
+}
+
+$('.navigation__login').append('<%= j render("errors") %>')

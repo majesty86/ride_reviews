@@ -1,0 +1,6 @@
+$('.login-form').remove()
+$('.errors').remove()
+$('.navigation__login').append('<%= j render("cool_thing") %>')
+$('.navigation__registration').find('a').remove()
+$('.navigation__registration').append('<%= j render("greeting") %>')
+$('.navigation__registration').append('<%= j render("logout") %>')
