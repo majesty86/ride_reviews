@@ -2,13 +2,13 @@ class SessionsController < ApplicationController
   include SessionHelper
 
   def new
-    @user = User.new
 
     respond_to do |f|
       f.html
       f.js
     end
 
+    @user = User.new
   end
 
   def create
