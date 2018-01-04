@@ -1,8 +1,9 @@
-class UsersController
+class UsersController < ApplicationController
   
   def new
     
     respond_to do |f|
+      f.html
       f.js
     end
 
@@ -10,13 +11,14 @@ class UsersController
   end
 
   def create
-
+    
     respond_to do |f|
+      f.html
       f.js
     end
 
     @user = User.new(user_params)
-
+    
     if @user.save
       session[:user_id] = @user.id
       render :create
