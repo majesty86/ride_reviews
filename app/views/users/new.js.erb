@@ -1,0 +1,9 @@
+$('.navigation__registration-link').remove()
+$('.navigation').find('.errors').remove()
+
+if ($('.registration-form').length === 0) {
+  $('.navigation__registration').append('<%= j render("registration") %>')  
+  $('.registration-form input').attr('autocomplete','off');
+}
+
+$('.navigation__registration').append('<%= j render("errors") %>')
