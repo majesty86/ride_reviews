@@ -1,5 +1,12 @@
+$('.registration-form').trigger('reset')
+$('.registration-form__username').focus()
 $('.navigation__registration-link').remove()
 $('.navigation').find('.errors').remove()
+$('.login-form').remove()
+
+if ($('.navigation__login').find('.navigation__login-link').length === 0) {
+  $('.navigation__login').append('<%= j render ("sessions/login_link") %>')
+}
 
 if ($('.registration-form').length === 0) {
   $('.navigation__registration').append('<%= j render("registration") %>')  
