@@ -1,0 +1,15 @@
+$('.login-form').trigger('reset')
+$('.login-form__email').focus()
+$('.navigation__login-link').remove()
+$('.navigation').find('.errors').remove()
+$('.registration-form').remove()
+
+if ($('.navigation__registration').find('.navigation__registration-link').length === 0) {
+  $('.navigation__registration').append('<%= j render ("users/registration_link") %>')  
+}
+
+if ($('.login-form').length === 0) {
+  $('.navigation__login').append('<%= j render "login" %>')  
+}
+
+$('.navigation__login').append('<%= j render("errors") %>')
