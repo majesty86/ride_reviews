@@ -5,7 +5,13 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
-  resources :rides
-  resources :users, only: [:create, :show]
+  resources :rides, only: [:index, :new, :create]
+
+  resources :users, only: [:create, :show] do
+    resources :rides, only: [:new, :create]
+  end
+
   resources :sessions, only: [:create]
+
+
 end
