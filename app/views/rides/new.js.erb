@@ -4,7 +4,7 @@ $('.navigation__center-box-new-ride-link').remove()
 $('.navigation__center-box').find('.errors').remove()
 
 if ($('.new-ride-form').length === 0) {
-  $('.navigation__center-box').append('<%= j render ("new_ride") %>')
+  $('.navigation__center-box').append('<%= j render ("new_ride_form") %>')
 }
 
 $('.navigation__center-box').append('<%= j render("errors") %>')
