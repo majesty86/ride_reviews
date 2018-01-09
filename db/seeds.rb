@@ -3,7 +3,8 @@ User.create!(username: 'jseinfeld',
              password: 'helloworld'
              )
 
-Ride.create!(starting_town: 'Chicago',
+Ride.create!(title: "Willis Tower to Revzilla",
+             starting_town: 'Chicago',
              ending_town: 'Philadelphia',
              starting_intersection: 'Jackson & Wacker',
              ending_intersection: '26th and Penrose Ferry',
