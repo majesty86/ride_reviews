@@ -4,7 +4,9 @@
     <title>Ride Reviews</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    'application', media: 'all'  %>
+    <%= stylesheet_link_tag    'application', "https://fonts.googleapis.com/css?family=Racing+Sans+One",  media: 'all' %>
+    <%= stylesheet_link_tag    'application', "https://fonts.googleapis.com/css?family=Merriweather|Racing+Sans+One", media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
@@ -18,7 +20,6 @@
         <% end %>
       </div>
       <div class="navigation__center-box">
-          <p class="pending-image">Image will go here...</p>
       </div>
       <div class="navigation__registration navigation__user-rides">
         <% if !current_user %>
