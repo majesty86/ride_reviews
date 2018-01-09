@@ -1,6 +1,7 @@
 class Ride < ApplicationRecord
   belongs_to :author, class_name: "User"
 
+  validates :title, presence: true
   validates :starting_town, presence: true
   validates :ending_town, presence: true
   validates :starting_intersection, presence: true
