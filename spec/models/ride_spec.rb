@@ -8,7 +8,9 @@ describe Ride, type: :model do
 
   subject { described_class.new(title: "Willis Tower to Revzilla",
                                 starting_city: "Chicago",
+                                starting_state: "IL",
                                 ending_city: "Philadelphia",
+                                ending_state: "PA",
                                 starting_address: "223 S Wacker Dr.",
                                 ending_address: "4020 S 26th St",
                                 distance_in_miles: 306,
@@ -30,8 +32,18 @@ describe Ride, type: :model do
     expect(subject).to_not be_valid
   end
 
+  it 'has a starting state' do 
+    subject.starting_state = nil
+    expect(subject).to_not be_valid
+  end
+
   it 'has an ending city' do 
     subject.ending_city = nil
+    expect(subject).to_not be_valid
+  end
+
+  it 'has an ending state' do 
+    subject.ending_state = nil
     expect(subject).to_not be_valid
   end
 

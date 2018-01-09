@@ -1,7 +1,7 @@
 <ul class="single-ride__list">
   <li class="rides-container__list-item"><strong><%= @ride.title %></strong></li>
-  <li class="rides-container__list-item">Starting City: <%= @ride.starting_city %></li>
-  <li class="rides-container__list-item">Ending City: <%= @ride.ending_city %></li>
+  <li class="rides-container__list-item">Starting City: <%= @ride.starting_city %>, <%= @ride.starting_state %></li>
+  <li class="rides-container__list-item">Ending City: <%= @ride.ending_city %>, <%= @ride.ending_state %></li>
   <li class="rides-container__list-item">Starting Address: <%= @ride.starting_address %></li>
   <li class="rides-container__list-item">Ending Address: <%= @ride.ending_address %></li>
   <li class="rides-container__list-item">Miles: <%= @ride.distance_in_miles %></li>
