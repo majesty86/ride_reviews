@@ -6,10 +6,11 @@ describe Ride, type: :model do
                         password: "helloworld"
                         )}
 
-  subject { described_class.new(starting_town: "Pittsburgh",
-                                ending_town: "Philadelphia",
-                                starting_intersection: "Forbes Ave. & Schenley Dr.",
-                                ending_intersection: "S. 26th St. and Penrose Ferry Rd.",
+  subject { described_class.new(title: "Willis Tower to Revzilla",
+                                starting_city: "Chicago",
+                                ending_city: "Philadelphia",
+                                starting_address: "223 S Wacker Dr.",
+                                ending_address: "4020 S 26th St",
                                 distance_in_miles: 306,
                                 star_rating: 5,
                                 author_id: user.id
@@ -19,23 +20,28 @@ describe Ride, type: :model do
     expect(subject).to be_valid
   end
 
-  it 'has a starting town' do
-    subject.starting_town = nil
+  it 'has a title' do 
+    subject.title = nil
     expect(subject).to_not be_valid
   end
 
-  it 'has an ending town' do 
-    subject.ending_town = nil
+  it 'has a starting city' do
+    subject.starting_city = nil
     expect(subject).to_not be_valid
   end
 
-  it 'has a starting intersection' do 
-    subject.starting_intersection = nil
+  it 'has an ending city' do 
+    subject.ending_city = nil
     expect(subject).to_not be_valid
   end
 
-  it 'has an ending intersection' do 
-    subject.ending_intersection = nil
+  it 'has a starting address' do 
+    subject.starting_address = nil
+    expect(subject).to_not be_valid
+  end
+
+  it 'has an ending address' do 
+    subject.ending_address = nil
     expect(subject).to_not be_valid
   end
   

@@ -34,7 +34,7 @@ class RidesController < ApplicationController
 
     private
       def ride_params
-        params.require(:ride).permit(:starting_town, :ending_town, :starting_intersection, :ending_intersection, :distance_in_miles, :star_rating, :author_id, :title)
+        params.require(:ride).permit(:starting_city, :ending_city, :starting_address, :ending_address, :distance_in_miles, :star_rating, :author_id, :title)
       end
 
   end
