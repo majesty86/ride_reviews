@@ -6,8 +6,13 @@
   border: 1px solid red;
 }
 
-.rides-container__list {
+.single-ride__list {
   list-style-type: none;
+  text-align: center;
+}
+
+.site-header {
+  width: 100%;
   text-align: center;
 }
 
@@ -31,10 +36,11 @@
   border: 1px solid green;
 }
 
-.navigation__image--random {
+.navigation__center-box {
   width: 100%;
   height: 220px;
   border: 1px solid black;
+  overflow-y: scroll;
   /*IDEA: Images can be people on motorcycles...it'll 'scroll' through...fade from one image to the next*/
 }
 
