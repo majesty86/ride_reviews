@@ -10,22 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180108235722) do
+ActiveRecord::Schema.define(version: 20180109174543) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "rides", force: :cascade do |t|
-    t.string "starting_town"
-    t.string "ending_town"
-    t.string "starting_intersection"
-    t.string "ending_intersection"
+    t.string "title"
+    t.string "starting_city"
+    t.string "ending_city"
+    t.string "starting_address"
+    t.string "ending_address"
     t.integer "distance_in_miles"
     t.integer "star_rating"
     t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "title"
+    t.string "starting_state"
+    t.string "ending_state"
     t.index ["author_id"], name: "index_rides_on_author_id"
   end
 

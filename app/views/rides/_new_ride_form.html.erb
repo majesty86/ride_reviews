@@ -1,10 +1,12 @@
 <%= form_with model: @ride, class: "new-ride-form" do |f| %>
   <h3>Add a new ride!</h3>
   <%= f.text_field :title, placeholder: "Title", class: "new-ride-form__title" %><br>
-  <%= f.text_field :starting_town, placeholder: "Starting Town" %><br>
-  <%= f.text_field :ending_town, placeholder: "Ending Town" %><br>
-  <%= f.text_field :starting_intersection, placeholder: "Starting Intersection" %><br>
-  <%= f.text_field :ending_intersection, placeholder: "Ending Intersection" %><br>
+  <%= f.text_field :starting_address, placeholder: "Starting Address" %>
+  <%= f.text_field :starting_city, placeholder: "City", class: "new-ride-form__city" %>
+  <%= f.select :starting_state, @state_list, class: "new-ride-form__state" %><br>
+  <%= f.text_field :ending_address, placeholder: "Ending Address" %>
+  <%= f.text_field :ending_city, placeholder: "City", class: "new-ride-form__city" %>
+  <%= f.select :ending_state, @state_list, class: "new-ride-form__state" %><br>
   <%= f.text_field :distance_in_miles, placeholder: "Distance (in miles)" %><br>
   <%= f.text_field :star_rating, placeholder: "Star Rating" %><br>
   <%= f.hidden_field :author_id, :value => current_user.id %>

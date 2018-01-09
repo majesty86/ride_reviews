@@ -4,11 +4,9 @@
   <div class="rides-list">
     <% @rides.each do |ride|  %>
       <ul class="single-ride__list">
-        <li class="rides-container__list-item"><strong><%= ride.title %></strong></li>
-        <li class="rides-container__list-item">Starting Town: <%= ride.starting_town %></li>
-        <li class="rides-container__list-item">Ending Town: <%= ride.ending_town %></li>
-        <li class="rides-container__list-item">Starting Intersection: <%= ride.starting_intersection %></li>
-        <li class="rides-container__list-item">Ending Intersection: <%= ride.ending_intersection %></li>
+        <li class="rides-container__list-item rides-container__list-item--title"><%= ride.title %></li>
+        <li class="rides-container__list-item">Starting Location: <%= ride.starting_address %>, <%= ride.starting_city %>, <%= ride.starting_state %></li>
+        <li class="rides-container__list-item">Ending Location: <%= ride.ending_address %>, <%= ride.ending_city %>, <%= ride.ending_state %></li>
         <li class="rides-container__list-item">Miles: <%= ride.distance_in_miles %></li>
         <li class="rides-container__list-item">Rating: <%= ride.star_rating %></li>
       </ul>
