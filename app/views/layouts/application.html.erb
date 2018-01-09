@@ -20,6 +20,8 @@
       <div class="navigation__center-box">
         <% if current_user %>
           <%= link_to "Add Ride", new_ride_path, remote: true, class: "navigation__center-box-new-ride-link" %>
+        <% else %>
+          <p class="pending-image">Image will go here...</p>
         <% end %>
       </div>
       <div class="navigation__registration">
