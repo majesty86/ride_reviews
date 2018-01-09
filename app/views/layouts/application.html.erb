@@ -14,7 +14,7 @@
         <% if !current_user %>
           <%= link_to "Login", login_path, remote: true, class: "navigation__login-link" %>
         <% else %>
-          <%= link_to "Add Ride", new_ride_path, remote: true, class: "navigation__center-box-new-ride-link" %>
+          <%= link_to "Add Ride", new_ride_path, remote: true, class: "navigation__new-ride-link" %>
         <% end %>
       </div>
       <div class="navigation__center-box">
