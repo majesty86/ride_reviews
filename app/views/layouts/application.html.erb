@@ -10,11 +10,11 @@
 
   <body>
     <div class="navigation">
-      <div class="navigation__login">
+      <div class="navigation__login navigation__user-rides">
         <% if !current_user %>
           <%= link_to "Login", login_path, remote: true, class: "navigation__login-link" %>
         <% else %>
-          <p>HEYO!</p>
+          <p><%= current_user.username %>'s Rides</p>
         <% end %>
       </div>
       <div class="navigation__center-box">
