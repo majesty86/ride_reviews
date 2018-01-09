@@ -17,8 +17,10 @@
           <p>HEYO!</p>
         <% end %>
       </div>
-      <div class="navigation__image--random navigation__add-ride">
-        <p>Add Ride Link will go here upon login</p>
+      <div class="navigation__center-box">
+        <% if current_user %>
+          <%= link_to "Add Ride", new_ride_path, remote: true, class: "navigation__center-box-new-ride-link" %>
+        <% end %>
       </div>
       <div class="navigation__registration">
         <% if !current_user %>
