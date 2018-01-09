@@ -3,7 +3,9 @@ class Ride < ApplicationRecord
 
   validates :title, presence: true
   validates :starting_city, presence: true
+  validates :starting_state, presence: true
   validates :ending_city, presence: true
+  validates :ending_state, presence: true
   validates :starting_address, presence: true
   validates :ending_address, presence: true
   validates :distance_in_miles, presence: true
