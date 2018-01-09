@@ -1,19 +1,38 @@
+body {
+  background-image: url('sunset_road.jpg');
+  background-size: cover;
+}
+
 .rides-container {
   float: left;
   width: 74%;
   height: 666px;
   overflow-y: scroll;
-  border: 1px solid red;
+}
+
+.rides-list {
+  background: rgba(255, 255, 255, 0.70);
+  border-radius: 20px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .single-ride__list {
+  margin-left: auto;
+  margin-right: auto;
   list-style-type: none;
-  text-align: center;
+  padding-bottom: 20px;
 }
 
 .site-header {
-  width: 100%;
+  color: white;
+  width: 75%;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navigation {
