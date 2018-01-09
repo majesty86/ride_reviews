@@ -30,6 +30,14 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find_by(id: session[:user_id])
+    @user_rides = @user.rides
+
+    respond_to do |f|
+      f.html
+      f.js
+    end
+
   end
 
   private
