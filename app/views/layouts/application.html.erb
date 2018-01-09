@@ -10,25 +10,22 @@
 
   <body>
     <div class="navigation">
-      <div class="navigation__login navigation__user-rides">
+      <div class="navigation__login navigation__add-ride">
         <% if !current_user %>
           <%= link_to "Login", login_path, remote: true, class: "navigation__login-link" %>
         <% else %>
-          <p><%= current_user.username %>'s Rides</p>
+          <%= link_to "Add Ride", new_ride_path, remote: true, class: "navigation__center-box-new-ride-link" %>
         <% end %>
       </div>
       <div class="navigation__center-box">
-        <% if current_user %>
-          <%= link_to "Add Ride", new_ride_path, remote: true, class: "navigation__center-box-new-ride-link" %>
-        <% else %>
           <p class="pending-image">Image will go here...</p>
-        <% end %>
       </div>
-      <div class="navigation__registration">
+      <div class="navigation__registration navigation__user-rides">
         <% if !current_user %>
           <%= link_to "Register", registration_path, remote: true, class: "navigation__registration-link" %>
         <% else %>
           <p>Hi, <%= current_user.username  %>!</p>
+          <p><%= current_user.username %>'s Rides</p>
           <%= link_to "Logout", logout_path %>
         <% end %>
       </div>
