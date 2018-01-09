@@ -1,0 +1,10 @@
+$('.new-ride-form').trigger('reset')
+$('.new-ride-form__title').focus()
+$('.navigation__center-box-new-ride-link').remove()
+$('.navigation__center-box').find('.errors').remove()
+
+if ($('.new-ride-form').length === 0) {
+  $('.navigation__center-box').append('<%= j render ("new_ride") %>')
+}
+
+$('.navigation__center-box').append('<%= j render("errors") %>')
