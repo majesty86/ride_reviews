@@ -3,7 +3,7 @@
   <ul class="rides-container__list">
     <h1 class="site-header">Ride Reviews</h1>
     <% @rides.each do |ride|  %>
-      <li class="rides-container__list-item"><strong>Ride #<%= ride.id %></strong></li>
+      <li class="rides-container__list-item"><strong><%= ride.title %></strong></li>
       <li class="rides-container__list-item">Starting Town: <%= ride.starting_town %></li>
       <li class="rides-container__list-item">Ending Town: <%= ride.ending_town %></li>
       <li class="rides-container__list-item">Starting Intersection: <%= ride.starting_intersection %></li>
