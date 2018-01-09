@@ -2,7 +2,7 @@ class RidesController < ApplicationController
   include SessionHelper
 
   def index
-    @rides = Ride.all
+    @rides = Ride.order(created_at: :desc)
   end
 
   def new
@@ -21,8 +21,7 @@ class RidesController < ApplicationController
       f.html
       f.js
     end
-    
-    @user = current_user
+
     @ride = Ride.new(ride_params)
 
     if @ride.save
