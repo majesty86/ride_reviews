@@ -1,5 +1,5 @@
 body {
-  background-image: url('sunset_road.jpg');
+  background-image: image-url('sunset_road.jpg');
   background-size: cover;
 }
 
@@ -67,7 +67,7 @@ body {
   height: 220px;
   border-radius: 5px;
   overflow-y: scroll;
-  background-image: url('harley_on_road.jpg');
+  background-image: image-url('harley_on_road.jpg');
   background-size: cover;
   /*IDEA: Images can be people on motorcycles...it'll 'scroll' through...fade from one image to the next*/
 }
