@@ -19,7 +19,6 @@ class Ride < ApplicationRecord
     city_profanity_filter
   end
 
-
   private
     def title_profanity_filter
       profanity_filter(title, :title)
@@ -36,9 +35,11 @@ class Ride < ApplicationRecord
     end
 
     def profanity_filter(column_name, column_symbol)
+      
       split_words(column_name).each do |word|
         add_language_errors(column_symbol) if inappropriate_words.include?(word.downcase)
       end
+      
     end
 
     def split_words(column_name)
