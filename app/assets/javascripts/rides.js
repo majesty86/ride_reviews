@@ -1,5 +1,10 @@
 $(document).ready(function(){
   $('.rides-container__list-item--title').hover(titleHoverOnHandler, titleHoverOffHandler)
+  $('.navigation__add-ride').on('click', '#star-one', oneStarHandler)
+  $('.navigation__add-ride').on('click', '#star-two', twoStarHandler)
+  $('.navigation__add-ride').on('click', '#star-three', threeStarHandler)
+  $('.navigation__add-ride').on('click', '#star-four', fourStarHandler)
+  $('.navigation__add-ride').on('click', '#star-five', fiveStarHandler)
   // $('.navigation__login').on('mouseover', loginImageCycle)
 });
 
@@ -10,6 +15,66 @@ var titleHoverOnHandler = function(){
 var titleHoverOffHandler = function(){
   $(this).css('color', 'white')
 };
+
+var oneStarHandler = function(){
+  clearRating()
+  oneStar()
+};
+
+var twoStarHandler = function(){
+  clearRating()
+  oneStar()
+  twoStars()
+};
+
+var threeStarHandler = function(){
+  clearRating()
+  oneStar()
+  twoStars()
+  threeStars()
+};
+
+var fourStarHandler = function(){
+  clearRating()
+  oneStar()
+  twoStars()
+  threeStars()
+  fourStars()
+};
+
+var fiveStarHandler = function(){
+  clearRating()
+  oneStar()
+  twoStars()
+  threeStars()
+  fourStars()
+  fiveStars()
+};
+
+clearRating = function(){
+  $('.rating-stars').css('color', 'white')
+}
+
+oneStar = function(){
+  $('#star-one').css('color', 'orange')
+}
+
+twoStars = function(){
+  $('#star-two').css('color', 'orange')
+}
+
+threeStars = function(){
+  $('#star-three').css('color', 'orange')
+}
+
+fourStars = function(){
+  $('#star-four').css('color', 'orange')
+}
+
+fiveStars = function(){
+  $('#star-five').css('color', 'orange')
+}
+
 
 // For image slideshows:
   // Build image array
