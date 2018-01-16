@@ -1,3 +1,4 @@
 $('.navigation__add-ride').find('.new-ride-form').remove()
+$('.navigation__add-ride').find('.errors').remove() 
 $('.navigation__add-ride').append('<%= j render ("new_ride_link") %>')
 $('.rides-list').prepend('<%= j render ("created_ride") %>')
