@@ -8,7 +8,14 @@
   <%= f.text_field :ending_city, placeholder: "City", class: "new-ride-form__city" %>
   <%= f.select :ending_state, @state_list, class: "new-ride-form__state" %><br>
   <%= f.text_field :distance_in_miles, placeholder: "Distance (in miles)" %><br>
-  <%= f.text_field :star_rating, placeholder: "Star Rating" %><br>
+  <label id="star-rate">Rate it!</label>
+  <label id="star-one" class="rating-stars">&#9733;<%= f.radio_button :star_rating, "1" %></label>
+  <label id="star-two" class="rating-stars">&#9733;<%= f.radio_button :star_rating, "2" %></label>
+  <label id="star-three" class="rating-stars">&#9733;<%= f.radio_button :star_rating, "3" %></label>
+  <label id="star-four" class="rating-stars">&#9733;<%= f.radio_button :star_rating, "4" %></label>
+  <label id="star-five" class="rating-stars">&#9733;<%= f.radio_button :star_rating, "5" %></label>
+  <br>
+
   <%= f.hidden_field :author_id, :value => current_user.id %>
   <%= f.submit "Create!", class: "new-ride-form__submit" %>
 <% end %>

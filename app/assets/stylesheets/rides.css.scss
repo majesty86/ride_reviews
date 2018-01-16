@@ -72,6 +72,10 @@ body {
   /*IDEA: Images can be people on motorcycles...it'll 'scroll' through...fade from one image to the next*/
 }
 
+.new-ride-form {
+  background-color: rgba(215, 215, 215, 0.8);
+}
+
 .new-ride-form__city {
   width: 75px;
 }
@@ -79,6 +83,22 @@ body {
 .new-ride-form__state {
   width: 30px;
 }
+
+#star-rate {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#star-one input, #star-two input, #star-three input, #star-four input, #star-five input{
+  opacity: 0;
+}
+
+#star-one, #star-two, #star-three, #star-four, #star-five {
+  color: white;
+  cursor: pointer;
+}
+
+
 
 
 
