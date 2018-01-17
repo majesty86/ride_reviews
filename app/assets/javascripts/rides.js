@@ -5,7 +5,7 @@ $(document).ready(function(){
   $('.navigation__add-ride').on('click', '#star-three', threeStarHandler)
   $('.navigation__add-ride').on('click', '#star-four', fourStarHandler)
   $('.navigation__add-ride').on('click', '#star-five', fiveStarHandler)
-  // $('.navigation__login').on('mouseover', loginImageCycle)
+  slideshowHandler()
 });
 
 var titleHoverOnHandler = function(){
@@ -75,22 +75,20 @@ fiveStars = function(){
   $('#star-five').css('color', 'orange')
 }
 
+var slideshowHandler = function(){
+  $('.navigation__center-box').find('img').hide()
+  setTimeout(randomPicture, 1000)
+};
 
-// For image slideshows:
-  // Build image array
-  // Time the change through the JS here with some fades
-  // Function for the div will be something like:
-    // $(this).css('background-image', 'image-url(image_array.sample)')
-  // Just execute function on bottom?  How to repeat?
+randomPicture = function(){
+  var images = $('.navigation__center-box').find('img').map(function(){
+    return this.className;
+  })
 
-// Okay, some notes on playing with this:
-  // 1. It's fuckin' hard.
-  // 2. Can't just change the file like magic on an event, because the image hasn't loaded with the page.
-  // 3. Possible solution: Have all the images on the page to begin with, in hidden tags? But then how to access them?
-  // 4. Maybe go back to just the middle div with images, and flipping the login/reg boxes?
+  var newPicture = images[Math.floor(Math.random() * images.length)];
+  $(`.${newPicture}`).show()
+}
 
-// var loginImageCycle = function(){
-//   console.log("ha")
-//   $('.navigation__login').css('background-image', image-url('suzuki_on_road.jpg'))
-// }
+
+
 
