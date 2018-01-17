@@ -76,17 +76,23 @@ fiveStars = function(){
 }
 
 var slideshowHandler = function(){
-  $('.navigation__center-box').find('img').hide()
-  setTimeout(randomPicture, 1000)
+  // setInterval(slideshow, 9000)
+  // slideshow()
 };
 
-randomPicture = function(){
+slideshow = function(){
   var images = $('.navigation__center-box').find('img').map(function(){
     return this.className;
   })
 
-  var newPicture = images[Math.floor(Math.random() * images.length)];
-  $(`.${newPicture}`).show()
+  // Need to fade out CURRENT image, not all of them. (line 91)
+  var currentImage = $('.navigation__center-box').find('img').attr('style', 'display: inline;')
+  console.log(currentImage)
+
+  var newImage = images[Math.floor(Math.random() * images.length)];
+  console.log(newImage)
+  $('.navigation__center-box').find('img').fadeOut(3000).delay(3000)
+  $(`.${newImage}`).fadeIn(3000)
 }
 
 
