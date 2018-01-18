@@ -102,8 +102,8 @@ slideshow = function(){
     newImage = images[slideshowCounter + 1]
   }
 
-  $(`.${currentImage}`).fadeOut(3000)
-  $(`.${newImage}`).delay(3000).fadeIn(3000)
+  $("." + currentImage).fadeOut(3000)
+  $("." + newImage).delay(3000).fadeIn(3000)
   slideshowCounter++
 }
 
