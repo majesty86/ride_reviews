@@ -5,7 +5,7 @@ $(document).ready(function(){
   $('.navigation__add-ride').on('click', '#star-three', threeStarHandler)
   $('.navigation__add-ride').on('click', '#star-four', fourStarHandler)
   $('.navigation__add-ride').on('click', '#star-five', fiveStarHandler)
-  // $('.navigation__login').on('mouseover', loginImageCycle)
+  slideshowHandler()
 });
 
 var titleHoverOnHandler = function(){
@@ -75,22 +75,41 @@ fiveStars = function(){
   $('#star-five').css('color', 'orange')
 }
 
+var slideshowHandler = function(){
+  setInterval(slideshow, 9000)
+};
 
-// For image slideshows:
-  // Build image array
-  // Time the change through the JS here with some fades
-  // Function for the div will be something like:
-    // $(this).css('background-image', 'image-url(image_array.sample)')
-  // Just execute function on bottom?  How to repeat?
+var slideshowCounter = 0
 
-// Okay, some notes on playing with this:
-  // 1. It's fuckin' hard.
-  // 2. Can't just change the file like magic on an event, because the image hasn't loaded with the page.
-  // 3. Possible solution: Have all the images on the page to begin with, in hidden tags? But then how to access them?
-  // 4. Maybe go back to just the middle div with images, and flipping the login/reg boxes?
+slideshow = function(){
+  var images = $('.navigation__center-box').find('img').map(function(){
+    return this.className;
+  })
 
-// var loginImageCycle = function(){
-//   console.log("ha")
-//   $('.navigation__login').css('background-image', image-url('suzuki_on_road.jpg'))
-// }
+  var currentImage;
+  var newImage;
+
+  if (slideshowCounter === images.length) {
+    slideshowCounter = 0
+  }
+
+  currentImage = images[slideshowCounter]
+
+  if (slideshowCounter === (images.length - 1)) {
+    newImage = images[0]
+  }
+  else {
+    newImage = images[slideshowCounter + 1]
+  }
+
+  $(`.${currentImage}`).fadeOut(3000)
+  $(`.${newImage}`).delay(3000).fadeIn(3000)
+  slideshowCounter++
+}
+
+// If current index is 3, make current image 0.  Reset new image to index 0.
+// If current index is 0 or 1, keep current image there.  Add one to new image.
+
+
+
 

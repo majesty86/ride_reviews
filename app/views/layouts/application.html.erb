@@ -20,14 +20,22 @@
         <% end %>
       </div>
       <div class="navigation__center-box">
+        <%= image_tag("cruiser_on_road2.jpg", alt: "Cruiser on road", class: "box--slideshow_image_1") %>
+        <%= image_tag("suzuki_on_road.jpg", alt: "Suzuki Motorcycle", class: "box--slideshow_image_2") %>
+        <%= image_tag("ducati_on_road.jpg", alt: "Ducati Motorcycle", class: "box--slideshow_image_3") %>
+        <%= image_tag("dyna_lowrider2.jpg", alt: "Harley Motorcycle", class: "box--slideshow_image_4") %>
+        <%= image_tag("ktm_duke_390.jpg", alt: "KTM Motorcycle", class: "box--slideshow_image_5") %>
+        <%= image_tag("cruisers_on_road.jpg", alt: "Cruisers on road", class: "box--slideshow_image_6") %>
+        <%= image_tag("mthood_road.jpg", alt: "Mt. Hood", class: "box--slideshow_image_7") %>
+        <%= image_tag("winding_road1.jpg", alt: "Winding road", class: "box--slideshow_image_8") %>
+        <%= image_tag("pov_riding2.jpg", alt: "On a motorcycle", class: "box--slideshow_image_9") %>
+        <%= image_tag("winding_road2.jpg", alt: "Winding road", class: "box--slideshow_image_10") %>
       </div>
       <div class="navigation__registration navigation__user-rides">
         <% if !current_user %>
           <%= link_to "Register", registration_path, remote: true, class: "navigation__registration-link" %>
         <% else %>
-          <p>Hi, <%= current_user.username  %>!</p>
-          <p><%= current_user.username %>'s Rides</p>
-          <%= link_to "Logout", logout_path %>
+          <%= link_to "Logout", logout_path, class: "navigation__logout-link" %>
         <% end %>
       </div>
     </div>
