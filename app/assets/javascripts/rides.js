@@ -76,24 +76,39 @@ fiveStars = function(){
 }
 
 var slideshowHandler = function(){
-  // setInterval(slideshow, 9000)
-  // slideshow()
+  setInterval(slideshow, 9000)
 };
+
+var slideshowCounter = 0
 
 slideshow = function(){
   var images = $('.navigation__center-box').find('img').map(function(){
     return this.className;
   })
 
-  // Need to fade out CURRENT image, not all of them. (line 91)
-  var currentImage = $('.navigation__center-box').find('img').attr('style', 'display: inline;')
-  console.log(currentImage)
+  var currentImage;
+  var newImage;
 
-  var newImage = images[Math.floor(Math.random() * images.length)];
-  console.log(newImage)
-  $('.navigation__center-box').find('img').fadeOut(3000).delay(3000)
-  $(`.${newImage}`).fadeIn(3000)
+  if (slideshowCounter === images.length) {
+    slideshowCounter = 0
+  }
+
+  currentImage = images[slideshowCounter]
+
+  if (slideshowCounter === (images.length - 1)) {
+    newImage = images[0]
+  }
+  else {
+    newImage = images[slideshowCounter + 1]
+  }
+
+  $(`.${currentImage}`).fadeOut(3000)
+  $(`.${newImage}`).delay(3000).fadeIn(3000)
+  slideshowCounter++
 }
+
+// If current index is 3, make current image 0.  Reset new image to index 0.
+// If current index is 0 or 1, keep current image there.  Add one to new image.
 
 
 
