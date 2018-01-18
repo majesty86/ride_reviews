@@ -56,23 +56,23 @@ clearRating = function(){
 }
 
 oneStar = function(){
-  $('#star-one').css('color', 'orange')
+  $('#star-one').css('color', 'red')
 }
 
 twoStars = function(){
-  $('#star-two').css('color', 'orange')
+  $('#star-two').css('color', 'red')
 }
 
 threeStars = function(){
-  $('#star-three').css('color', 'orange')
+  $('#star-three').css('color', 'red')
 }
 
 fourStars = function(){
-  $('#star-four').css('color', 'orange')
+  $('#star-four').css('color', 'red')
 }
 
 fiveStars = function(){
-  $('#star-five').css('color', 'orange')
+  $('#star-five').css('color', 'red')
 }
 
 var slideshowHandler = function(){
