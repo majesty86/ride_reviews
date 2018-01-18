@@ -1,4 +1,6 @@
 <%= form_with class: "login-form", url: sessions_path do |f| %>
+  <h2>Login</h2>
+  <br>
   <%= f.text_field :email, placeholder: "Email", class: "login-form__email" %><br>
   <%= f.password_field :password, placeholder: "Password" %><br>
   <%= f.submit "Login", class: "login-form__submit" %>
