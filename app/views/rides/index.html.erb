@@ -17,9 +17,11 @@
               width="600"
               height="450"
               frameborder="0" style="border:0"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDjR6XtQpiT8AlkVBDoO6XQ03nuJNtLQgM   
-                  &q=<%= ride.format_starting_location %>" allowfullscreen>
-            </iframe>  
+              src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDjR6XtQpiT8AlkVBDoO6XQ03nuJNtLQgM
+                &origin=<%= ride.format_starting_location %>
+                &destination=<%= ride.format_ending_location %>" 
+                allowfullscreen>
+            </iframe>
 
           </div>
         </li>
