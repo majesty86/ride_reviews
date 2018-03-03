@@ -202,8 +202,35 @@ body {
 }
 
 .map {
-
+  display: none;
 }
+
+.rides-container__map-toggle {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: black;
+  color: orange;
+  border: 1px solid orange;
+  font-style: italic;
+  box-shadow: 0 0 5px;
+  cursor: pointer;
+}
+
+.rides-container__map-toggle:hover {
+  color: #FFB833;
+}
+
+.rides-container__map-toggle:focus {
+  outline: 0;
+}
+
+.rides-container__map-toggle:active {
+  box-shadow: 0 0 0;
+  transform: translateY(2px);
+}
+
+
 
 
 

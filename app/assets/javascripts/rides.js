@@ -6,6 +6,7 @@ $(document).ready(function(){
   $('.navigation__add-ride').on('click', '#star-four', fourStarHandler)
   $('.navigation__add-ride').on('click', '#star-five', fiveStarHandler)
   slideshowHandler()
+  $('.rides-container__map-toggle').on('click', mapToggleHandler)
 });
 
 var titleHoverOnHandler = function(){
@@ -106,6 +107,10 @@ slideshow = function(){
   $("." + newImage).delay(3000).fadeIn(3000)
   slideshowCounter++
 }
+
+var mapToggleHandler = function(){
+  $(this).closest('ul').find('.map').toggle()
+};
 
 // If current index is 3, make current image 0.  Reset new image to index 0.
 // If current index is 0 or 1, keep current image there.  Add one to new image.
