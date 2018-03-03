@@ -13,3 +13,14 @@ Ride.create!(title: "Willis Tower to Revzilla",
              distance_in_miles: 760,
              star_rating: 5,
              author_id: 1)
+
+Ride.create!(title: "Tail of the Dragon",
+             starting_city: "Robbinsville",
+             starting_state: "NC",
+             ending_city: "Tallassee",
+             ending_state: "TN",
+             starting_address: "14981 Tapoco Rd.",
+             ending_address: "State Hwy 115",
+             distance_in_miles: 11,
+             star_rating: 5,
+             author_id: 1)
