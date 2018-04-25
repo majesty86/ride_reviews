@@ -2,7 +2,6 @@
 <div class="rides-container">
   <h1 class="site-header">Ride Reviews</h1>
   <div class="rides-list">
-    <%=# render 'rides/sort_form' %>
     <% @rides.each do |ride|  %>
       <ul class="single-ride__list">
         <li class="rides-container__list-item rides-container__list-item--title"><%= ride.title %></li>
