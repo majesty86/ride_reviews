@@ -1,8 +1,14 @@
 class RidesController < ApplicationController
   include SessionHelper
 
+  def sort
+    @rides = Ride.all.select { |ride| ride.starting_state == params["state"] || ride.ending_state == params["state"] }
+    @state_list = state_list
+  end  
+
   def index
     @rides = Ride.order(created_at: :desc)
+    @state_list = state_list
   end
 
   def new
@@ -13,7 +19,7 @@ class RidesController < ApplicationController
       f.js
     end
 
-    @state_list = ['IL', 'AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']
+    @state_list = state_list
     
   end
 

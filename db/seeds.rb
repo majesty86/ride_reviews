@@ -25,17 +25,6 @@ Ride.create!(title: "Twisted Sisters",
              star_rating: 5,
              author_id: 1)
 
-Ride.create!(title: "Beartooth Highway",
-             starting_city: "Cody",
-             starting_state: "MT",
-             ending_city: "Red Lodge",
-             ending_state: "MT",
-             starting_address: "708 US-212",
-             ending_address: "400 Bear Creek Hill",
-             distance_in_miles: 111,
-             star_rating: 5,
-             author_id: 1)
-
 Ride.create!(title: "Blue Ridge Parkway",
              starting_city: "Bryson City",
              starting_state: "NC",
@@ -119,7 +108,7 @@ Ride.create!(title: "Tunnel of Trees",
              ending_city: "Harbor Springs",
              ending_state: "MI",
              starting_address: "542 State St",
-             ending_address: "6351 N State Rd",
+             ending_address: "6425 Shomin St",
              distance_in_miles: 15,
              star_rating: 5,
              author_id: 1)

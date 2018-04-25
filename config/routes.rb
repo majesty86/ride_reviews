@@ -13,5 +13,6 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:create]
 
+  post 'sort_by_state', to: 'rides#sort', as: 'sort_by_state'
 
 end
