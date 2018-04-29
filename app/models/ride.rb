@@ -37,4 +37,9 @@ class Ride < ApplicationRecord
   def format_ending_location
     "#{format_ending_address},#{format_ending_city_and_state}"
   end
+
+  def self.filter_states
+    states = Ride.all.pluck('starting_state') + Ride.all.pluck('ending_state')
+    states.uniq.sort
+  end
 end

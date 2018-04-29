@@ -1,0 +1,4 @@
+<%= form_with class: "state-filter-form", url: filter_by_state_path do |f| %>
+  <%= f.select :state, @state_list %>
+  <%= f.submit "Filter by state" %>
+<% end %>

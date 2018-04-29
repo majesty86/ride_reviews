@@ -1,34 +1,18 @@
 
 <div class="rides-container">
-  <h1 class="site-header">Ride Reviews</h1>
+  <h1 class="site-header"><%= link_to image_tag('ride_reviews_logo.png', size: "390x100"), rides_path %></h1>
   <div class="rides-list">
+    <%= render 'rides/filter_by_state_form' %>
     <% @rides.each do |ride|  %>
       <ul class="single-ride__list">
-        <li class="rides-container__list-item rides-container__list-item--title"><%= ride.title %></li>
+        <li class="rides-container__list-item rides-container__list-item--title">
+        <%= link_to ride.title, ride %>  
+        </li>
         <li class="rides-container__list-item">Starting Location: <%= ride.starting_address %>, <%= ride.starting_city %>, <%= ride.starting_state %></li>
         <li class="rides-container__list-item">Ending Location: <%= ride.ending_address %>, <%= ride.ending_city %>, <%= ride.ending_state %></li>
         <li class="rides-container__list-item">Miles: <%= ride.distance_in_miles %></li>
         <li class="rides-container__list-item">Rating: <%= ride.star_rating %> stars</li>
-        <li class="rides-container__list-item">
-          <button class="rides-container__map-toggle">Toggle map</button>
-        </li>
-        <li class="map-item">
-          <div class="map">
-            
-            <iframe
-              width="600"
-              height="450"
-              frameborder="0" style="border:0"
-              src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDjR6XtQpiT8AlkVBDoO6XQ03nuJNtLQgM
-                &origin=<%= ride.format_starting_location %>
-                &destination=<%= ride.format_ending_location %>" 
-                allowfullscreen>
-            </iframe>
-
-          </div>
-        </li>
       </ul>
-
     <% end %>
   </div>
 </div>

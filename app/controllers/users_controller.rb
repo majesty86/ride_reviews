@@ -1,22 +1,12 @@
 class UsersController < ApplicationController
   
   def new
-    
-    respond_to do |f|
-      f.html
-      f.js
-    end
-
+    respond_to(:html, :js)
     @user = User.new
   end
 
   def create
-    
-    respond_to do |f|
-      f.html
-      f.js
-    end
-
+    respond_to(:html, :js)
     @user = User.new(user_params)
     
     if @user.save
@@ -30,14 +20,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    respond_to(:html, :js)
     @user = User.find_by(id: session[:user_id])
     @user_rides = @user.rides
-
-    respond_to do |f|
-      f.html
-      f.js
-    end
-
   end
 
   private
