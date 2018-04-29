@@ -2,22 +2,12 @@ class SessionsController < ApplicationController
   include SessionHelper
 
   def new
-
-    respond_to do |f|
-      f.html
-      f.js
-    end
-
+    respond_to(:html, :js)
     @user = User.new
   end
 
   def create
-
-    respond_to do |f|
-      f.html
-      f.js
-    end
-    
+    respond_to(:html, :js)
     @user = User.find_by(email: params[:email])
 
     if @user && @user.authenticate(params[:password])

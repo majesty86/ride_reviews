@@ -25,6 +25,11 @@ body {
   overflow-y: scroll;
 }
 
+.rides-list a, .rides-list a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
 .single-ride__list {
   margin-left: auto;
   margin-right: auto;
@@ -36,6 +41,12 @@ body {
 
 .rides-container__list-item--title {
   font-style: italic;
+  color: #FF0000;
+  font-size: 125%;
+}
+
+.rides-container__list-item--title:hover {
+  color: orange;
 }
 
 .site-header {

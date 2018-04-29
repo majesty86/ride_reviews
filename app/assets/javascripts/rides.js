@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  $('.rides-container__list-item--title').hover(titleHoverOnHandler, titleHoverOffHandler)
   $('.navigation__add-ride').on('click', '#star-one', oneStarHandler)
   $('.navigation__add-ride').on('click', '#star-two', twoStarHandler)
   $('.navigation__add-ride').on('click', '#star-three', threeStarHandler)
@@ -9,47 +8,24 @@ $(document).ready(function(){
   $('.rides-container__map-toggle').on('click', mapToggleHandler)
 });
 
-var titleHoverOnHandler = function(){
-  $(this).css('color', 'silver')
-};
-
-var titleHoverOffHandler = function(){
-  $(this).css('color', 'white')
-};
-
 var oneStarHandler = function(){
-  clearRating()
-  oneStar()
+  clearRating(); oneStar()
 };
 
 var twoStarHandler = function(){
-  clearRating()
-  oneStar()
-  twoStars()
+  clearRating(); oneStar(); twoStars()
 };
 
 var threeStarHandler = function(){
-  clearRating()
-  oneStar()
-  twoStars()
-  threeStars()
+  clearRating(); oneStar(); twoStars(); threeStars()
 };
 
 var fourStarHandler = function(){
-  clearRating()
-  oneStar()
-  twoStars()
-  threeStars()
-  fourStars()
+  clearRating(); oneStar(); twoStars(); threeStars(); fourStars()
 };
 
 var fiveStarHandler = function(){
-  clearRating()
-  oneStar()
-  twoStars()
-  threeStars()
-  fourStars()
-  fiveStars()
+  clearRating(); oneStar(); twoStars(); threeStars(); fourStars(); fiveStars()
 };
 
 clearRating = function(){
@@ -111,9 +87,6 @@ slideshow = function(){
 var mapToggleHandler = function(){
   $(this).closest('ul').find('.map').toggle()
 };
-
-// If current index is 3, make current image 0.  Reset new image to index 0.
-// If current index is 0 or 1, keep current image there.  Add one to new image.
 
 
 
