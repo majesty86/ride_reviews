@@ -2,6 +2,7 @@ class RidesController < ApplicationController
   include SessionHelper
 
   def index
+    respond_to(:html, :js)
     @rides = Ride.order(created_at: :desc)
     @state_list = Ride.filter_states
   end
@@ -26,6 +27,7 @@ class RidesController < ApplicationController
   end
 
   def show
+    respond_to(:html, :js)
     @ride = Ride.find_by(id: params[:id])
     render :show
   end
