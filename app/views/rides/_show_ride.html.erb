@@ -1,0 +1,26 @@
+<ul class="single-ride__list">
+  <%= link_to "Back to all rides", rides_path, remote: true %>
+    <h2>Ride: <%= @ride.title %></h2>
+      <li>Starts in <%= @ride.starting_city %>, <%= @ride.starting_state %> at <%= @ride.starting_address %></li>
+
+      <li>Ends in <%= @ride.ending_city %>, <%= @ride.ending_state %> at <%= @ride.ending_address %></li>
+
+      <li>
+          <button class="rides-container__map-toggle">Toggle map</button>
+        </li>
+        <li class="map-item">
+          <div class="map">
+            
+            <iframe
+              width="600"
+              height="450"
+              frameborder="0" style="border:0"
+              src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDjR6XtQpiT8AlkVBDoO6XQ03nuJNtLQgM
+                &origin=<%= @ride.format_starting_location %>
+                &destination=<%= @ride.format_ending_location %>" 
+                allowfullscreen>
+            </iframe>
+
+          </div>
+        </li>
+      </ul>

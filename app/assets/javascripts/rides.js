@@ -5,7 +5,7 @@ $(document).ready(function(){
   $('.navigation__add-ride').on('click', '#star-four', fourStarHandler)
   $('.navigation__add-ride').on('click', '#star-five', fiveStarHandler)
   slideshowHandler()
-  $('.rides-container__map-toggle').on('click', mapToggleHandler)
+  $('.rides-container').on('click', '.rides-container__map-toggle', mapToggleHandler)
 });
 
 var oneStarHandler = function(){
