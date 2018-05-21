@@ -28,7 +28,7 @@
 
 .navigation__login-link, .navigation__registration-link, .navigation__logout-link {
   display: block;
-  font-size: 250%;
+  font-size: 200%;
   line-height: 200px;
   text-align: center;
   font-family: 'Racing Sans One', cursive;
@@ -36,7 +36,7 @@
   font-weight: bold;
   text-decoration: none;
   text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
 

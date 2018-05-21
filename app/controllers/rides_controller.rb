@@ -15,7 +15,10 @@ class RidesController < ApplicationController
 
   def create
     respond_to(:html, :js)
+    # For new ride being added
     @ride = Ride.new(ride_params)
+    # For all rides when resetting state filter on create
+    @rides = Ride.order(created_at: :desc)
     @state_list = state_list
 
     if @ride.save

@@ -83,7 +83,7 @@ body {
 
 .navigation__new-ride-link {
   display: block;
-  font-size: 350%;
+  font-size: 200%;
   line-height: 200px;
   text-align: center;
   font-family: 'Racing Sans One', cursive;
@@ -91,7 +91,7 @@ body {
   font-weight: bold;
   text-decoration: none;
   text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
 
@@ -247,9 +247,24 @@ body {
   transform: translateY(2px);
 }
 
+.state-filter-form {
+  margin-left: 40px;
+}
 
+.state-filter-form input {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  background-color: black;
+  color: red;
+  border: 1px solid red;
+  font-weight: bold;
+}
 
-
+.state-filter-form select {
+  background-color: black;
+  color: red;
+  border: 1px solid red;
+}
 
 
 
