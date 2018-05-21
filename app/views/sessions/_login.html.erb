@@ -6,4 +6,12 @@
   <%= f.submit "Login", class: "login-form__submit" %>
 <% end %>
 
+
+<!-- Plug in username/password with guest user, hide it -->
+<%= form_with class: "login-form", url: sessions_path do |f| %>
+  <%= f.hidden_field :email, value: "guest@guest.com", class: "login-form__email" %><br>
+  <%= f.hidden_field :password, value: "helloworld" %><br>
+  <%= f.submit "Login as Guest", class: "login-form__submit" %>
+<% end %>
+
 <%= render 'errors' if @errors %>
